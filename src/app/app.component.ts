@@ -8,7 +8,7 @@ import { Repository } from './repository'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  usernames:User[] = [
-    {name:'mohamed', login:'mohamed', following:'mohamed', html_url:'mohamed'}
-  ]
+  // usernames:User[] = [
+  //   {name:'mohamed', login:'mohamed', following:'mohamed', html_url:'mohamed'}
+  // ]
 }
