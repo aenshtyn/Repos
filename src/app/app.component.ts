@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './user'
+import { Repository } from './repository'
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  usernames:string[];
-
-  constructor(){
-      this.usernames = ['mohamed', 'aenshtyn']
-}
+  usernames:User[] = [
+    {name:'mohamed', login:'mohamed', following:'mohamed', html_url:'mohamed'}
+  ]
 }
