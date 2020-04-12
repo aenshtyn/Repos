@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../user';
+import {  ActivatedRoute, ParamMap } from '@angular/router';
 import { Repository } from '../repository';
+import { AccountService } from '../account-service/account.service';
 
 @Component({
   selector: 'app-account-detail',
@@ -9,11 +11,13 @@ import { Repository } from '../repository';
 })
 export class AccountDetailComponent implements OnInit {
 
-  @Input() usernames: User;
+  user: User;
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private service:AccountService)) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(){
+    let id = this.route.snapshot.paramMap.get('id');
+      this.user = this.service.getUser(id)
+    }
 
 }

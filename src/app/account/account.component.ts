@@ -5,6 +5,7 @@ import { AccountService } from '../account-service/account.service';
 import { HttpClient } from '@angular/common/http';
 import { Profile } from '../github-class/profile';
 import { GithubRequestService } from '../git-http/github-request.service';
+import { Router } from '@angular/router' ;
 
 @Component({
   selector: 'app-account',
@@ -13,6 +14,10 @@ import { GithubRequestService } from '../git-http/github-request.service';
 })
 
 export class AccountComponent implements OnInit {
+
+  goToUrl(id){
+    this.router.navigate(['/users',id])
+  }
 
   usernames : User[] ;
   profile : Profile;
@@ -27,7 +32,7 @@ export class AccountComponent implements OnInit {
 
 
 
-  constructor(accountService:AccountService, private githubService:GithubRequestService) {
+  constructor(accountService:AccountService, private githubService:GithubRequestService, private router:Router) {
     this.usernames = accountService.getUsers()
   }
 

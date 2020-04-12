@@ -10,5 +10,13 @@ export class AccountService {
   return User
 }
 
+ getUser(id){
+    for (let user of Users){
+      if (goal.id == id){
+        return user;
+      }
+    }
+  }
+
   constructor() { }
 }
