@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { AccountDetailComponent } from './account-detail/account-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgProgressModule.forRoot(),
+   NgProgressHttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
