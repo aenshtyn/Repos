@@ -15,40 +15,63 @@ import { Router } from '@angular/router' ;
 
 export class AccountComponent implements OnInit {
 
-  goToUrl(id){
-    this.router.navigate(['/users',id])
-  }
-
-  usernames : User[] ;
-  profile : Profile;
-
-  // this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+  // goToUrl(id){
+  //   this.router.navigate(['/users',id])
+  // }
   //
-  //   this.quote = new Quote(data.author, data.quote)
-  // },err=>{
-  //   this.quote = new Quote("Winston Churchill","Never never give up!")
-  //   console.log("An error occurred")
-  // })
-
-
-
-  constructor(accountService:AccountService, private githubService:GithubRequestService, private router:Router) {
-    this.usernames = accountService.getUsers()
-  }
-
-    toggleDetails(index){
-      this.usernames[index].showRepo = !this.usernames[index].showRepo;
-    }
-
-
-    ngOnInit() {
-
-      this.githubService.githubRequest()
-      this.profile = this.githubService.profile
-    }
+  // usernames : User[] ;
+  // profile : Profile;
+  //
+  //
+  //
+  // constructor(accountService:AccountService, private githubService:GithubRequestService, private router:Router) {
+  //   this.usernames = accountService.getUsers()
+  // }
+  //
+  //   toggleDetails(index){
+  //     this.usernames[index].showRepo = !this.usernames[index].showRepo;
+  //   }
+  //
+  //
+  //   ngOnInit() {
+  //
+  //     this.githubService.githubRequest()
+  //     this.profile = this.githubService.profile
+  //   }
 
     // this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
     //       // Succesful API request
     //       this.profile = new Profile(data.name, data.quote)
     //     })
-  }
+  // }
+
+  profile: any = [];
+  repos: any = [];
+  username: string;
+  isCollapsed: boolean= true;
+  isCollapsed1: boolean= true;
+
+   constructor( private accountService: AccountService) {
+
+   }
+   searchGithub(){
+     this.accountService.updateProfile(this.username);
+     this.accountService.getProfileInfo().subscribe(profile=>{
+       console.log(profile);
+       this.profile = profile;
+     });
+     this.accountService.getProfileRepos().subscribe(repos=>{
+       console.log(repos);
+       this.repos = repos;
+     });
+   }
+   toggleCollapse(){
+     this.isCollapsed = !this.isCollapsed;
+   }
+   toggleCollapse1(){
+     this.isCollapsed1 = !this.isCollapsed1;
+   }
+   ngOnInit() {
+   }
+
+}
