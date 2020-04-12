@@ -14,8 +14,8 @@ export class AccountService {
 }
 
  getUser(id){
-    for (let user of Users){
-      if (goal.id == id){
+    for (let user of User){
+      if (user.id == id){
         return user;
       }
     }
