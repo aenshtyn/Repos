@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { GithubClass } from '../github-class/github-class';
-import { GithubRequestService } from '../github-http/github-http.service';
+import { Profile } from '../github-class/profile';
+import { GithubRequestService } from '../git-http/github-request.service';
 
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
-  providers:[GithubHttpService],
+  selector: 'app-find',
+  templateUrl: './find.component.html',
+  styleUrls: ['./find.component.css'],
+  providers:[GithubRequestService],
 })
-export class SearchComponent implements OnInit {
-  github:GithubClass;
+export class FindComponent implements OnInit {
 
-  constructor(private http:HttpClient, private githubService: GithubHttpService, )
+  profile: Profile ;
+
+  constructor(private http:HttpClient, private githubService: GithubRequestService, )
   {
    }
 
   ngOnInit() {
-    this.githubService.githubRequest()
-    this.github=this.githubService.github
+    this.githubService.profileRequest()
+    this.profile=this.githubService.profile
   }
 
 }

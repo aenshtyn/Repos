@@ -55,12 +55,12 @@ export class AccountComponent implements OnInit {
 
    }
    searchGithub(){
-     this.accountService.updateProfile(this.username);
-     this.accountService.getProfileInfo().subscribe(profile=>{
+     this.accountService.updateAccount(this.username);
+     this.accountService.getAccountInfo().subscribe(profile=>{
        console.log(profile);
        this.profile = profile;
      });
-     this.accountService.getProfileRepos().subscribe(repos=>{
+     this.accountService.getAccountRepos().subscribe(repos=>{
        console.log(repos);
        this.repos = repos;
      });

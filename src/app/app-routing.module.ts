@@ -7,7 +7,6 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: 'account', component: AccountComponent},
   { path: 'about', component: AboutComponent },
-  { path: '**' , component: NotFoundComponent},
   { path: '', redirectTo:"/account", pathMatch:"full"},
 ];
 

@@ -6,8 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { GithubRequestService } from './git-http/github-request.service';
+import { AccountService } from './account-service/account.service';
+// import { NgProgressModule } from '@ngx-progressbar/core';
+// import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -27,8 +29,8 @@ import { FindComponent } from './find/find.component';
     AppRoutingModule,
     HttpClientModule,
      FormsModule,
-    NgProgressModule.forRoot(),
-   NgProgressHttpClientModule
+   //  NgProgressModule.forRoot(),
+   // NgProgressHttpClientModule
 
   ],
   providers: [GithubRequestService, AccountService],
