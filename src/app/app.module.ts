@@ -8,12 +8,14 @@ import { AccountComponent } from './account/account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
-    AccountDetailComponent
+    AccountDetailComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

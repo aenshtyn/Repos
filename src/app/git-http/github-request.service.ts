@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Profile } from '../github-class/profile'
+import { Profile } from '../github-class/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,6 @@ export class GithubRequestService {
 
   constructor(private http:HttpClient) {
     this.profile = new Profile("","");
-   }) { }
 }
 
 profileRequest(){
@@ -21,6 +20,7 @@ profileRequest(){
      quote:string;
      name:string;
    }
+
    let promise = new Promise((resolve,reject)=>{
           this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response=>{
             this.profile.quote = response.quote
