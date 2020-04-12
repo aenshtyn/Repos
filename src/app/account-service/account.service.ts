@@ -6,7 +6,7 @@ import { User } from '../user';
 })
 export class AccountService {
 
-  getUser(){
+  getUsers(){
   return User
 }
 
