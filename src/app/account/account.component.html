@@ -1,9 +1,26 @@
-<div>
+<div class = "user">
   <h1>Github Users</h1>
-  <ul>
-      <li *ngFor = 'let username of usernames'>
-      <p> {{ username.name }}</p>
-      <app-account-detail [ username ] = 'username'></app-account-detail>
-  </li>
-  </ul>
-</div>
+  <hr >
+  <div class = "row">
+    <div class = "col-sm-5">
+
+
+      <div *ngFor = 'let user of usernames; let i = index' class = "container">
+  <div>
+      <p> {{user.name}} </p>
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+  </div>
+
+  <!-- <div *ngIf= 'usernames.showRepo'> -->
+  <app-account-detail *ngIf ='user.showRepo' [usernames] = 'user'></app-account-detail>
+  </div>
+   <hr >
+    </div>
+
+  </div>
+
+  </div>
+    <hr  >
+  <div class = "footer">
+    <h6>Made by Aenshtyn <br> 2020</h6>
+  </div>

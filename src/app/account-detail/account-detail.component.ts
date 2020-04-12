@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Account } from '../account';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { User } from '../user';
+import { Repository } from '../repository';
 
 @Component({
   selector: 'app-account-detail',
@@ -8,7 +9,7 @@ import { Account } from '../account';
 })
 export class AccountDetailComponent implements OnInit {
 
-  @Input() username: User;
+  @Input() usernames: User;
 
   constructor() { }
 
