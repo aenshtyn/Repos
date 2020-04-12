@@ -1,3 +1,13 @@
 export class Profile {
-  constructor(public name:string, public quote:string ){}
+  constructor(
+    public name:string,
+    public quote:string,
+    public name: string,
+    public person_url: (string),
+    public followers: string,
+    public following: string,
+    public html_url: string,
+    public login: string,
+
+  ){}
 }

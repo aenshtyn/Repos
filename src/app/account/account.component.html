@@ -9,7 +9,6 @@
       <div *ngFor = 'let user of usernames; let i = index' class = "container">
   <div>
              <button class="btn btn-primary" (click)='goToUrl(user.id)'>View Details</button>
-    <button (click)='toggleDetails(i)'>Toggle Details</button>
   </div>
 
   <!-- <div *ngIf= 'usernames.showRepo'> -->
