@@ -11,8 +11,11 @@ import { Repository } from '../repository';
 export class AccountComponent implements OnInit {
 
   usernames : User[] = [
-    {name:'mohamed', login:'mohamed', following:'mohamed', html_url:'mohamed'}
-  ];
+new User (1,'Mohamed','Mohamed','Mohamed','Mohamed','Mohamed',);
+
+toggleDetails(index){
+  this.usernames[index].showRepo = !this.usernames[index].showRepo;
+}
 
   constructor() { }
 
