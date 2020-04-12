@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from './user'
-import { Repository } from './repository'
+// import { User } from './user'
+// import { Repository } from './repository'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,4 @@ import { Repository } from './repository'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // usernames:User[] = [
-  //   {name:'mohamed', login:'mohamed', following:'mohamed', html_url:'mohamed'}
-  // ]
 }

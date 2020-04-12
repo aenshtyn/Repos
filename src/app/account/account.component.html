@@ -3,6 +3,7 @@
   <ul>
       <li *ngFor = 'let username of usernames'>
       <p> {{ username.name }}</p>
+      <app-account-detail [ username ] = 'username'></app-account-detail>
   </li>
   </ul>
 </div>
