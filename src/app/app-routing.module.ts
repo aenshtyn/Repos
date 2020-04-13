@@ -6,7 +6,6 @@ import { LandingComponent } from './landing/landing.component';
 
 
 const routes: Routes = [
-  { path: 'landing', component: LandingComponent},
   { path: 'account', component: AccountComponent},
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo:"/landing", pathMatch:"full"},

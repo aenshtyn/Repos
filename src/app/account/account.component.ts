@@ -15,35 +15,7 @@ import { Router } from '@angular/router' ;
 
 export class AccountComponent implements OnInit {
 
-  // goToUrl(id){
-  //   this.router.navigate(['/users',id])
-  // }
-  //
-  // usernames : User[] ;
-  // profile : Profile;
-  //
-  //
-  //
-  // constructor(accountService:AccountService, private githubService:GithubRequestService, private router:Router) {
-  //   this.usernames = accountService.getUsers()
-  // }
-  //
-  //   toggleDetails(index){
-  //     this.usernames[index].showRepo = !this.usernames[index].showRepo;
-  //   }
-  //
-  //
-  //   ngOnInit() {
-  //
-  //     this.githubService.githubRequest()
-  //     this.profile = this.githubService.profile
-  //   }
 
-    // this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
-    //       // Succesful API request
-    //       this.profile = new Profile(data.name, data.quote)
-    //     })
-  // }
 
   profile: any = [];
   repos: any = [];
