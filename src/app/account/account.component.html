@@ -8,34 +8,18 @@
     <div *ngIf="username.length>0 && !isCollapsed">
         <div class="panel panel-default">
             <div class="panel-heading" appHighlight>
-              <h3>profile name: {{profile.name}} <span style="color:red;font-weight:bold">(@{{profile.login}})</span></h3>
+              <h3>profile name: {{profile.name}} </h3>
                 <br>
-                <span *ngIf="profile.company">Works at: {{profile.company}}</span>
-                <br>
-                <span *ngIf="profile.location">Location: {{profile.location}}</span>
             </div>
             <br>
             <div class="panel-body" >
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="{{profile.person_url}}" alt="user profile" class="img-circle img-responsive">
-                    </div>
                     <br>
                     <div class="col-md-6" id="list">
-                        <ul class="list-group">
-                            <li class="list-group-item" *ngIf="profile.bio">Bio: {{profile.bio}}</li>
-                            <li class="list-group-item" *ngIf="profile.company">Company name: {{profile.company}}</li>
-                            <li class="list-group-item" id="gitlist">Member since: {{profile.created_at | date}}</li>
-                            <li class="list-group-item" *ngIf="profile.blog">Website: <a href={{profile.blog}} target="_blank">{{profile.blog}}</a></li>
-                            <li class="list-group-item" *ngIf="profile.email">Email: <a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
-                        </ul>
-                    </div>
-                    <br>
-                    <div class="col-md-6">
                         <span class="label label-default">{{profile.followers}} Followers</span><br>
                         <span class="label label-primary">{{profile.following}} Following</span><br>
                         <span class="label label-info">{{profile.public_repos}} Public repos</span><br>
-                        <span class="label label-warning">{{profile.public_gists}} Public gists</span><br>
+
                     </div>
                     <div class="col-md-6">
                         <button><a href="{{profile.html_url}}" target="_blank" id="githubbutton">View Github Profile </a></button>
