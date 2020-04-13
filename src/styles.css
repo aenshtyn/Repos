@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+font-family: 'Baloo Thambi 2', cursive;
+font-family: 'Gotu', sans-serif;
+font-family: 'Sen', sans-serif;
+
+body {
+  font-family: 'Sen';
+}
