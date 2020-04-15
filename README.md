@@ -1,6 +1,6 @@
 # Gitsearch
 
-## Gitsearch  (https://https://aenshtyn.github.io/Repos/)
+## Gitsearch  (https://aenshtyn.github.io/Repos/)
 
 This is my Github Search App
 
